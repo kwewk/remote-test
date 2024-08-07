@@ -3,7 +3,7 @@
 // сохранение данных
 using (FileStream fs = new FileStream("user.json", FileMode.OpenOrCreate))
 {
-    Person tom = new Person("James", 23);
+    Person tom = new Person("Dave", 23);
     await JsonSerializer.SerializeAsync<Person>(fs, tom);
     Console.WriteLine("Data has been saved to file");
 }
